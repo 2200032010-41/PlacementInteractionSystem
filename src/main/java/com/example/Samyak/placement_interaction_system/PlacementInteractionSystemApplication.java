@@ -8,7 +8,7 @@ public class PlacementInteractionSystemApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PlacementInteractionSystemApplication.class, args);
-		System.out.println("Project Running....");
+		System.out.println("Hi Git...");
 	}
 
 }
