@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Job Opportunities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/images/background.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: rgba(76, 175, 80, 0.9);
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        #job-opportunities {
+            padding: 2em;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            margin: 2em auto;
+            width: 80%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .job-card {
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 5px;
+            background-color: rgba(250, 250, 250, 0.9);
+        }
+        .job-card h3 {
+            color: #4CAF50;
+            margin: 0;
+        }
+        .job-card p {
+            color: #666;
+            margin: 0.5em 0;
+        }
+        .job-card ul {
+            padding: 0;
+            list-style-type: none;
+        }
+        .job-card ul li {
+            margin: 0.3em 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1em;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Job Opportunities</h1>
+        <nav>
+            <ul>
+                <li><a th:href="@{/studentDashboard}">Dashboard</a></li>
+                <li><a th:href="@{/viewApplications}">My Applications</a></li>
+                <li><a th:href="@{/logout}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="job-opportunities">
+        <h2>Available Job Opportunities</h2>
+        
+        <!-- Sample Job 1 -->
+        <div class="job-card">
+            <h3>Software Engineer</h3>
+            <p><strong>Company:</strong> Tech Solutions Inc.</p>
+            <p><strong>Location:</strong> San Francisco, CA</p>
+            <p><strong>Job Description:</strong> Seeking a passionate Software Engineer to join our dynamic team. You will work on developing innovative applications.</p>
+            <ul>
+                <li><strong>Eligibility:</strong> Bachelor's degree in Computer Science or related field.</li>
+                <li><strong>Requirements:</strong> Proficiency in Java, Python, or C#; experience with web development.</li>
+                <li><strong>Salary:</strong> $80,000 - $100,000 per year</li>
+            </ul>
+            <button>Apply Now</button>
+        </div>
+        
+        <!-- Sample Job 2 -->
+        <div class="job-card">
+            <h3>Data Analyst</h3>
+            <p><strong>Company:</strong> Data Insights Ltd.</p>
+            <p><strong>Location:</strong> New York, NY</p>
+            <p><strong>Job Description:</strong> Looking for a Data Analyst to collect and analyze data to help drive business solutions.</p>
+            <ul>
+                <li><strong>Eligibility:</strong> Bachelor's degree in Statistics, Mathematics, or related field.</li>
+                <li><strong>Requirements:</strong> Strong analytical skills; experience with SQL and data visualization tools.</li>
+                <li><strong>Salary:</strong> $70,000 - $90,000 per year</li>
+            </ul>
+            <button>Apply Now</button>
+        </div>
+        
+        <!-- Sample Job 3 -->
+        <div class="job-card">
+            <h3>Marketing Specialist</h3>
+            <p><strong>Company:</strong> Creative Marketing Agency</p>
+            <p><strong>Location:</strong> Austin, TX</p>
+            <p><strong>Job Description:</strong> Join our team to develop and implement effective marketing strategies for our clients.</p>
+            <ul>
+                <li><strong>Eligibility:</strong> Bachelor's degree in Marketing or related field.</li>
+                <li><strong>Requirements:</strong> Excellent communication skills; experience with digital marketing.</li>
+                <li><strong>Salary:</strong> $60,000 - $80,000 per year</li>
+            </ul>
+            <button>Apply Now</button>
+        </div>
+
+    </section>
+
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
